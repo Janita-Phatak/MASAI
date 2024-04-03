@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panda Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@22,500,0,0" />
+  <style>
+    .card{
+      width: 400px;
+      padding: 20px;
+      margin: auto;
+    }
+    h1{
+      font-size: 40px;
+      font-family: sans-serif;
+     }
+    h2{
+      font-family: "Pixelify Sans",Arial, Helvetica, sans-serif;
+      font-weight:700;
+      font-size: 30px;
+      letter-spacing: -2px;
+
+      
+    }
+    .card-body{
+      width: 400px;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      padding: 20px;
+      box-sizing: border-box;
+      box-shadow: 0 2px 5px rgba(212, 209, 209, 0.722);
+      margin: auto;
+    }
+    .image-container {
+      width: 355px;
+      height: 240px;
+      overflow: hidden;
+      border-radius: 50%;
+      margin: auto;
+    }
+    
+    .image-container img {
+       object-fit: cover;
+    }
+    .card-name{
+      text-align: center;
+      font-family: "Pixelify Sans",Arial, Helvetica, sans-serif;
+      font-weight:700;
+      font-size: 30px;
+      color: rgba(170, 182, 58, 0.693);
+      letter-spacing: -2px;
+      margin: 20px;
+    }
+
+
+    .card-info{
+      text-align: center;
+      color: rgb(115, 115, 115);
+      font-size: 18px;
+      margin-top: -15px;
+    }
+    
+    .card-year{
+      text-align: center;
+      font-size: 18px;
+    }
+    
+    .rate {
+    display: flex; 
+    justify-content: center; 
+    margin: 0 auto; 
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Title</h1>
+    <h2>Panda Card</h2>
+ 
+    <div class="card-body">
+      <div class="image-container">
+        <img src="https://i.ibb.co/Jqvy8gN/panda.jpg" alt="I'm Panda!">  
+      </div>
+
+      <p class="card-name">John Doe</p>
+      <p class="card-info">Computer Science 1</p>
+      <p class="card-info">Computer Science 2</p>
+      <p class="card-year">Year: 3</p>
+
+      <div class="rate">
+        <span class="material-symbols-outlined">star</span>
+        <span class="material-symbols-outlined">star</span>
+        <span class="material-symbols-outlined">star</span>
+        <span class="material-symbols-outlined">star</span>
+        <span class="material-symbols-outlined">star</span>  
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

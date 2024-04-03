@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai-success-stories-webpage</title>
+    <style>
+        body{
+            width: 100%;
+            margin: auto;
+        }
+        body> #admission{
+            background-color:#FEDFE5;
+            border-color: transparent;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            position:relative; 
+           
+        }
+        #admission > p {
+            margin: 8px 8px;
+            line-height: 24px;
+            font-family: Sans,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+            font-weight: 600!important;
+            font-size: 15px;
+            text-align: center;
+        }
+        #admission > p > button {
+            letter-spacing: 1.25px;
+            background-color: #ED0331;
+            text-transform: uppercase;
+            line-height: 24px;
+            font-weight: 600!important;
+            font-size: 13px;
+            color: white;
+            border-radius: 8px;
+            border-style: none;  
+            margin-top: 6px;
+            margin-left: 10px;
+            cursor: pointer;
+            padding: 5px 12px;
+
+        }
+        nav{
+            background-color: white;
+            color: rgb(55 65 81); 
+            font-size: 16px;
+            font-family: sans-serif;
+            border-color: #e5e7eb; 
+            display: flex;  
+            align-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+       .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .nav-container > img{
+            margin-left: 15px; 
+        }
+
+        .nav-container ul {
+            list-style: none; 
+            display: flex;
+            gap: 10px; 
+            padding-top: 10px;
+            padding-bottom : 10px;
+            padding-left: 0px;
+            margin: auto;
+            
+        }
+
+        .nav-container li {
+            display: flex;
+            align-items: center;
+            border-radius: 0.25rem;
+            padding: 10px; 
+        }
+
+        .nav-container a {
+            text-decoration: none;
+            color: #333; 
+            font-weight: 600; 
+            transition: color 0.2s ease-in-out; 
+            font-size: 14px;
+            padding: 8px 2px;
+            letter-spacing: 1.25px;
+            font-family: Open Sans,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+            text-align: center;
+            margin: auto;
+           
+        }
+
+        .nav-container a:hover {
+            color: red; 
+        }
+
+        ul > li:nth-child(5) a {
+            color: red; 
+            background-color: rgba(239, 152, 152, 0.08);
+            border-radius: 4px;
+        }
+
+                
+        #btn1 {
+            padding: 12px 8px 12px 8px;
+            display: flex;
+            letter-spacing: 1.25px;
+            line-height: 24px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 14px;
+            background-color: rgb(229 254 255);
+            color: #6E71CC;
+            border-radius: 8px;
+            border: transparent;
+        }
+
+        #btn2 {
+            color: red;
+            background-color: white;
+            border-color: red;
+            border-radius: 8px;
+            padding: 11px 13px 11px 13px;
+            display: inline-flex;
+            letter-spacing: 1.25px;
+            line-height: 24px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 14px;
+            border-width: 1px;
+            margin-right: 25px; 
+            margin-left: 8px;
+        }
+
+        .body-container{
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+
+        .card1{
+            display: block;
+            height: 300px;
+            text-align: left;
+            margin: 10px;
+            padding: 40px 20px 10px 10px;
+            width: 90%;
+            font-family: Open Sans,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+           
+        }
+
+        .card1 > h1{
+             color: #6E71CC;
+             font-weight: 900;
+        }
+
+        .card1 > button{            
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #ED0331;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            text-transform: uppercase; 
+        }
+        .card1 button:hover {
+            background-color: #2F62CD;
+        }
+
+        .card2 {
+            width: 100%;
+            margin: 10px auto; 
+            padding: 40px 20px 10px 10px;
+           
+        }
+
+        .card2 iframe {
+            display: block;
+            height: 250px;
+            width: 100%; 
+            margin: 0; 
+            padding: 0; 
+            border: none;
+            border-radius: 15px;
+            margin-left: 5px;  
+            border:solid gray 1px;
+        }
+
+    
+        footer{
+            background-color: #3470E4;
+            color: #F3F2F2;
+            text-align: center;
+            padding: 32px 16px 2px;
+        }
+
+        footer > h2 {
+            font-size: 34px;
+            line-height: 32px;
+            font-weight: 700!important;
+            font-family: "Poppins", sans-serif;
+        
+        }
+
+        footer > p {
+            font-weight: 400; 
+            margin-top: 12px;
+            font-family: sans-serif; 
+            line-height: 24px;
+        
+        }
+   </style>
+</head>
+<body>
+    <div id="admission">
+        <p>Admissions open for our 15th April IIT Guwahati CS Domain batch
+        <button type="button">Apply now</button></p>
+    </div>
+    
+        <nav class="nav-container">
+            <img src="masai_logo.png" alt="logo">
+            
+             <ul>
+                <li><a href="">COURSES</li></a>
+                <li><a href="">FEES</li></a>
+                <li><a href="">EVENTS</li></a>
+                <li><a href="">LEARN</li></a>
+                <li><a href="">SUCCESS STORIES</li></a>
+                <li><a href="">HIRE FROM US</li></a>
+            </ul>
+
+            <button id="btn1" type="submit" >Refer &amp; Earn</button>
+            <button id="btn2" type="submit">Sign UP</button>
+        </nav>
+
+        <div class="body-container">
+            
+            <div class="card1">
+                <h1>Proof that dreams do come true</h1>
+                <h2>A testament to what’s possible</h2>
+                <button type="submit">Apply now</button>
+            </div>
+
+            <div class="card2">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0867JeIfyLY?si=WXQLKwv1c2qdmJ06" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+            </div>
+              
+        </div>
+
+        <footer>
+            <h2>How is Masai Creating an Impact?</h2>
+            <p>4000+ students placed across 1000+ companies</p>   
+        </footer>
+  </body>
+</html>

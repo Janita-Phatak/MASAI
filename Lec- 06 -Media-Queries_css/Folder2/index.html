@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design-Problem_3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body{
+        width: 100%;
+        margin: auto;
+    }
+    footer{
+        width: 100%;
+        margin: 0;
+    }
+    #container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "a b"
+        "c d";
+    }
+    #logo{
+        background-color: #02026F;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        grid-area: a;
+    }
+    #logo img{
+        width: 80%;
+        padding: 30px;
+        
+    }
+    #links{
+        background-color: #3140AF;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        gap: 20px;
+        grid-area: b;
+    }
+    
+    ul{
+        list-style-type: none;
+    }
+    .menu li a{
+        text-transform: capitalize;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 14px;  
+        line-height: 2.5;  
+        font-weight: normal;
+        color: #F4EDF0;
+        text-decoration: none;
+    }
+    .menu ul > li:first-child a{
+        font-size: 20px;  
+        line-height: 1.5;  
+        font-weight: bold;
+        color: #FEFCF9;
+        text-decoration: none;
+    }
+    .menu ul > li:first-child{
+        padding: 30px 0px 20px 0px;
+    }
+    #region{
+        background-color: #222222;
+        color: #CBE4E4;
+        text-transform: capitalize;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 14px;  
+        line-height: 1.5;  
+        font-weight: bolder;
+        color: #F4EDF0;
+        letter-spacing: 0.5px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        gap: 20px;
+        padding: 20px 0px 20px 10px;
+        padding-left: 30px;
+        border-top: 2px solid #5F5F5F;
+        grid-area: c;
+    }
+
+    #region span{
+        width: 5%;
+        display: flex;
+        justify-content: baseline;
+        align-items: center;
+    }
+
+    #region img{
+        width: 100%;
+    }
+
+    #copyright-area  ul{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0px 20px 10px;
+        margin-left: 30px;
+        
+    }
+    #copyright-area{
+        border-top: 2px solid #5F5F5F;
+        grid-area: d;
+        padding-left: 0;
+    }
+  
+    #copyright-area,  #copyright-area > ul > li > a{
+        background-color: #222222;
+        color: #CBE4E4;
+        text-transform: capitalize;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 13px;  
+        line-height: 1.5;  
+        font-weight: normal;
+        color: #F4EDF0;
+        letter-spacing: 1px;
+    }
+    .dropdown{
+        display: none;
+    }
+    @media screen and (min-width:280px) and (max-width:667px){
+        #container{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas: 
+            "d"
+            "b"
+            "a";
+        }
+        #region{
+            display: none;
+        }
+        #links{
+            border-top: 2px solid #5F5F5F;
+            flex-flow: column nowrap; 
+            gap: 4px;
+        }
+        .menu{
+            display: none;
+        }
+        .dropdown{
+            display: block;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown:hover .fa {
+            transform: translateY(-50%) rotate(180deg); 
+        }
+        .drp{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .tag{
+            text-align: left;
+        }
+        .drp , .drp a{
+            margin-left: 10px;
+            padding: 10px;
+            cursor: pointer; 
+            background-color: #3140AF;
+            border: none;
+            text-transform: capitalize;
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 18px;  
+            line-height: 1.5;  
+            font-weight: bold;
+            color: #FEFCF9;
+            text-decoration: none;
+        }
+        .dropdown-menu {
+            margin-top: 0px;
+            display: none;
+            position: relative;
+            background-color: #3140AF;
+            min-width: 160px;
+        }
+
+        .dropdown-menu > li a {
+            font-size: 16px;  
+            line-height: 2.5;  
+            font-weight: normal;
+            color: #F4EDF0;
+            text-decoration: none;
+            text-transform: capitalize;
+        } 
+        .fa{
+            margin-left:250px;
+            margin-right: 30px;
+        } 
+        
+    #copyright-area  ul{
+        margin-left: 5px;
+        margin-right: 5px;
+        
+    }
+    
+     }
+
+    @media screen and (min-width:668px) and (max-width:1023px){
+        #container{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas: 
+            "b"
+            "a"
+            "d";
+        }
+        #region{
+            display: none;
+        }
+    }
+    
+</style>
+<body>
+    <footer>
+        <div id="container">
+            <div id="logo">
+                <a href="#"><img src="https://i.ibb.co/7WV9MbS/logo.jpg" alt="logo" ></a>
+            </div>
+            <div id="links">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">shop</a></li>
+                        <li><a href="#">gift cards</a></li>
+                        <li><a href="#">etsy registry</a></li>
+                        <li><a href="#">sitemap</a></li>
+                        <li><a href="#">etsy blog</a></li>
+                        <li><a href="#">etsy united kingdom</a></li>
+                        <li><a href="#">etsy germany</a></li>
+                        <li><a href="#">etsy canada</a></li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Sell</a></li>
+                        <li><a href="#">sell on etsy</a></li>
+                        <li><a href="#">teams</a></li>
+                        <li><a href="#">forums</a></li>
+                        <li><a href="#">affiliates & creators</a></li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">etsy. inc.</a></li>
+                        <li><a href="#">policies</a></li>
+                        <li><a href="#">investors</a></li>
+                        <li><a href="#">careers</a></li>
+                        <li><a href="#">press</a></li>
+                        <li><a href="#">impact</a></li>
+                        <li><a href="#">legal imprint</a></li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">shop</a></li>
+                        <li><a href="#">gift cards</a></li>
+                        <li><a href="#">etsy registry</a></li>
+                        <li><a href="#">sitemap</a></li>
+                        <li><a href="#">etsy blog</a></li>
+                        <li><a href="#">etsy united kingdom</a></li>
+                        <li><a href="#">etsy germany</a></li>
+                        <li><a href="#">etsy canada</a></li>
+                    </ul>
+                </div>
+                 <div class="dropdown">
+                    <button class="drp"><div class="tag"><a href="#">shop</a></div><div><i class="fa fa-angle-down"></i></div></button>
+                    <ul class="dropdown-menu"> 
+                        <li><a href="#">gift cards</a></li>
+                        <li><a href="#">etsy registry</a></li>
+                        <li><a href="#">sitemap</a></li>
+                        <li><a href="#">etsy blog</a></li>
+                        <li><a href="#">etsy united kingdom</a></li>
+                        <li><a href="#">etsy germany</a></li>
+                        <li><a href="#">etsy canada</a></li>
+                    </ul>          
+                </div>
+                <div class="dropdown">
+                    <button class="drp"><div class="tag"><a href="#">sell</a></div><div><i class="fa fa-angle-down"></i></div></button>
+                    <ul class="dropdown-menu"> 
+                        <li><a href="#">sell on etsy</a></li>
+                        <li><a href="#">teams</a></li>
+                        <li><a href="#">forums</a></li>
+                        <li><a href="#">affiliates & creators</a></li>
+                    </ul>          
+                </div>
+                <div class="dropdown">
+                    <button class="drp"><div class="tag"><a href="#">about</a></div><div><i class="fa fa-angle-down"></i></div></button>
+                    <ul class="dropdown-menu"> 
+                        <li><a href="#">etsy. inc.</a></li>
+                        <li><a href="#">policies</a></li>
+                        <li><a href="#">investors</a></li>
+                        <li><a href="#">careers</a></li>
+                        <li><a href="#">press</a></li>
+                        <li><a href="#">impact</a></li>
+                        <li><a href="#">legal imprint</a></li>
+                    </ul>          
+                </div>
+                <div class="dropdown">
+                    <button class="drp"><div class="tag"><a href="#">help</a></div><div><i class="fa fa-angle-down"></i></div></button>
+                    <ul class="dropdown-menu"> 
+                        <li><a href="#">Help Centre</a></li>
+                        <li><a href="#">privacy settings</a></li>
+                    </ul>          
+                </div>
+            </div>
+            <div id="region">
+                <span><img src="https://i.ibb.co/Hx0DG7T/India.png" alt="India"></span><p>India &nbsp; | &nbsp;  English (IN)&nbsp; | &nbsp;  &#8377;(INR) </p>
+            </div>
+            <div id="copyright-area">
+                <ul>
+                    <li>&copy; 2024 Etsy, INC.</li>
+                    <li><a href="#">terms of use</a></li>
+                    <li><a href="#">privacy</a></li>
+                    <li><a href="#">interst- based ads</a></li>
+                    <li><a href="#">local shops</a></li>
+                    <li><a href="#">regions</a></li>
+                </ul>
+            </div>
+        </div>   
+    </footer>
+</body>
+</html>

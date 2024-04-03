@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav using flex</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body{
+            width: 100%;
+            margin: auto;
+        }
+       
+        nav{
+            background-color: white;
+            color: rgb(55 65 81); 
+            font-size: 16px;
+            font-family: Open Sans,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+            border-color: #e5e7eb; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: auto; 
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+               
+        }
+
+
+        nav ul {
+            list-style: none; 
+            padding-top: 10px;
+            padding-bottom : 10px;
+            display: flex;
+            gap: 10px; 
+            
+        }
+
+        nav li {
+            display: flex;
+            padding: 5px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333; 
+            font-weight: 600; 
+            transition: color 0.2s ease-in-out; 
+            font-size: 14px;
+            padding: 10px 10px;
+            letter-spacing: 1.25px;
+            text-align: center;
+           
+        }
+
+        nav a:hover {
+            color: red; 
+            background-color: rgba(239, 152, 152, 0.08);
+            border-radius: 8px;
+        }
+
+        
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .drp {
+            border: none;
+            outline: none;
+            background-color: inherit;
+            font-family: inherit;
+        }
+        .dropdown-menu {
+            margin-top: 50px;
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);  
+        }
+
+        .dropdown-menu > li {
+           margin-left: -40px;
+        }
+                
+        #btn1 {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 1.25px;
+            line-height: 24px;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 14px;
+            background-color: rgb(229 254 255);
+            color: #6E71CC;
+            border: transparent;
+            border-radius: 4px;
+            margin-left: 20px;
+           
+        }
+        .icon{
+            height: 30px;
+            display: flex;
+            vertical-align: middle;
+    
+        }
+
+
+        #btn1:hover{
+            background-color: rgba(241, 239, 239, 0.506);  
+        }
+
+        #btn2 {
+            color: red;
+            background-color: white;
+            border-color: rgba(245, 93, 93, 0.863);
+            border-radius: 8px;
+            padding: 11px 15px 11px 15px;
+            letter-spacing: 1.25px;
+            line-height: 24px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 14px;
+            border-width: 1px;
+           
+            margin-left: 28px;
+          
+
+            display: inline-flex;
+        }
+
+        #btn2:hover{
+            background-color: rgba(241, 239, 239, 0.506);
+        }
+
+
+        .fa-angle-down {
+            padding-left: 8px; 
+            font-weight: bold;
+        }
+
+
+
+   </style>
+</head>
+<body>
+        <nav>
+            <a href="#" style="padding: 0px 50px;"><img src="https://i.ibb.co/qp7Xwtx/masai-logo.png" alt="masai-logo"></a>
+            
+             <ul>
+                  <li class="dropdown">
+                    <button class="drp"><a href="#">COURSES<i class="fa fa-angle-down"></i></a></button>
+                    <ul class="dropdown-menu"> 
+                        <li><a href = "#"> Full Stack Web Development - Full Time</a></li>
+                        <li><a href = "#"> Data Analytics - Full Time</a></li>
+                        <li><a href = "#"> Software Testing & Automation - Full Time</a></li>
+                    </ul>          
+                  </li>
+                  
+                <li><a href="#">FEES & ISA</li></a>
+                <li><a href="#">ABOUT US</li></a>
+                <li><a href="#">HIRE FROM US</li></a>
+                <li><a href="#">FAQ</li></a>
+                <li><a href="#">EVENTS</li></a>   
+            </ul>
+
+            <button id="btn1" type="submit" >Refer &amp; Earn 
+                <span class="icon"> <img src="linkedin-reaction.png" alt=" icon"> </span>
+            </button>
+            <button id="btn2" type="submit">login</button>
+
+  </body>
+</html>

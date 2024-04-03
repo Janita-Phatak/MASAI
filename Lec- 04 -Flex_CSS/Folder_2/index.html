@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <style>
+        body{
+            width: 100%;
+            margin: auto;
+            background-color: beige;
+           
+        }
+        #container{
+            display: flex;
+            flex-flow: row wrap;
+            gap:50px;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .card{
+            height: 600px;
+            width: 300px;
+            box-shadow: 0 4px 12px 0 rgba(4, 4, 4, 0.958);
+        }
+
+        .card > img {
+            /* background-color: rgb(155, 152, 152); */
+            height: 370px;
+            width: 300px;
+            box-shadow: 0 4px 12px 0 rgba(7, 7, 7, 0.958);
+        }
+
+        .content{
+           display: flex;
+           flex-flow: column wrap;
+           align-items: center;
+        }
+
+        .content h2{
+            font-family: sans-serif;
+            font-weight: 700!important;
+            text-shadow: 3.5px 1.5px 0 rgb(179, 169, 169);
+        }
+
+
+        .content p{
+            color: rgb(59, 57, 57);
+            padding: -4px -4px;
+            margin: 5px;
+            
+        }
+
+        #container .card .content .release{
+            color: green;
+            font-weight: 600;
+        }
+
+        #container .card .content .notreleased{
+            color: red;
+            font-weight: 600;
+        }
+
+        .content button{
+            background-color: aquamarine;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 600;
+            font-family:sans-serif;
+            border-color: transparent;
+            border-radius: 4px;
+            padding: 6px;
+            width: 130px;
+            margin: 20px;
+            box-shadow: 0 4px 12px 0 rgba(18, 116, 134, 0.958); 
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="card">
+            <img src="https://i.ibb.co/HDjNZrr/panda.jpg" alt="Kung Fu Panda">
+            <div class="content">
+                <h2>Kung Fu Panda 4</h2>
+                <p class="release">In Theatre</p>
+                <p>U</p>
+                <p>English, Hindi, Tamil, Telgu</p>
+                <button type="submit">book now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.ibb.co/XjZZ89C/godzilla.jpg" alt="Godzilla x Kong">
+            <div class="content">
+                <h2>Godzilla x Kong</h2>
+                <p class="notreleased">Coming Soon</p>
+                <p>UA</p>
+                <p>English, Hindi, Tamil, Telgu</p>
+                <button type="submit">book now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.ibb.co/sWgW1ff/dune.jpg" alt="Dune">
+            <div class="content">
+                <h2>Dune: Part Two</h2>
+                <p class="release">In Theatre</p>
+                <p>UA</p>
+                <p>English, Hindi</p>
+                <button type="submit">book now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.ibb.co/4j2gGRJ/yodha.jpg" alt="Yodha">
+            <div class="content">
+                <h2>Yodha</h2>
+                <p class="release">In Theatre</p>
+                <p>UA</p>
+                <p>Hindi</p>
+                <button type="submit">book now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.ibb.co/Sx4G706/shaitaan.jpg" alt="Shaitaan">
+            <div class="content">
+                <h2>Shaitaan</h2>
+                <p class="release">In Theatre</p>
+                <p>UA</p>
+                <p>Hindi</p>
+                <button type="submit">book now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.ibb.co/0ZJPKMG/370.jpg" alt="Article 370">
+            <div class="content">
+                <h2>Article 370</h2>
+                <p class="release">In Theatre</p>
+                 <p>UA</p>
+                <p>Hindi</p>
+                <button type="submit">book now</button>
+            </div>
+        </div>
+    </div>   
+</body>
+</html>

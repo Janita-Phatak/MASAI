@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evalution-1</title>
+    <style>
+        body{
+            width: 100%;
+            margin: auto;
+        }
+        nav{
+            width: 100%;
+            margin-right:0;
+            display: flex;
+         
+            align-items: center;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+        h1{
+            color:rgb(0,87,173);
+            text-transform: capitalize;
+            font-size: 22px;
+            font-weight: bolder;
+            font-family: sans-serif;
+            margin-left: 20px;
+            letter-spacing: 0;
+        }
+        h1+div{
+            padding: 10px 30px 10px 30px;
+            color: rgb(108,162,224);
+            display: flex;
+            gap: 30px;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: bold;
+            font-family:'Times New Roman', Times, serif;
+            margin:auto;
+        }
+        nav button{
+            color: white;
+            background-color: red;
+            padding:10px;
+            margin-right: 20px;
+            text-transform: capitalize;
+            border: none;
+            justify-content: flex-end;
+        }
+        #container{
+            margin: auto;
+            width: 90%; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+        h2{
+            font-weight: 700;
+            margin-left: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          
+            line-height: 1.5;
+        }
+
+        #menu{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 20px;
+            gap: 20px;
+        }
+        #menu .card{
+            background-color: red;
+            width: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        #menu .card img{
+            width: 50%;
+            padding: 20px
+        }
+        #menu .card h3{
+            color: white;
+            text-transform: uppercase;
+            font-size: 20px;
+            margin-top: 5px;
+        }
+        #menu .card p{
+            color: white;
+            text-align: center;
+            padding: 0px 30px;
+            margin-top: 0;
+        }
+        #menu .card button{
+            background-color: wheat;
+            color:red;
+            padding: 15px;
+            border: none;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        #discover{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap:20px;
+            margin: 20px;
+        }
+        #discover .menucard{
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            background-color: white;
+            width: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        #discover .menucard img{
+            width: 30%;
+        }
+        #discover .menucard h3{
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        #discover .menucard p{
+            text-align: center;
+            font-weight: 400;
+            margin-top: 0;
+        }
+        #discover .menucard div{
+            color: red;
+            text-transform: uppercase;
+            border-top: 1px gray solid;
+            padding: 10px 40px 20px 40px;
+            font-weight: bold;
+        }
+        footer{
+            background-color: #F4F4F4;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+        }
+        #app{
+            margin-top: 30px;
+        }
+       
+       #app img{
+            width: 100%;
+            margin: 20px 0px 0px 40px;
+        }
+        #offer{
+            margin:30px 10px 20px 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+           
+        }
+        #offer h1{
+            color: black;
+            font-size: 40px;
+            font-weight: 700!important;
+        }
+        #offer p{
+            color: black;
+            font-size: 20px;
+            font-weight: normal;
+            margin-top: 0;
+            width:60%;
+        }
+        #offer span{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+           
+        }
+        #offer span img{
+           width: 30%;
+           
+            
+        }
+        @media screen and (min-width:320px) and (max-width:767px){
+            nav h1+div{
+                visibility: hidden;
+                
+            }
+            #menu{
+            grid-template-columns: repeat(1, 1fr);
+            }
+            #discover{
+            grid-template-columns: repeat(1, 1fr);
+            }
+            footer{
+                flex-flow: column wrap;
+            }
+            
+        }
+        @media screen and (min-width:768px) and (max-width:1023px){
+            nav h1+div{
+                visibility: hidden;
+            }
+            #menu{
+            grid-template-columns: repeat(2, 1fr);
+            }
+            #discover{
+            grid-template-columns: repeat(2, 1fr);
+            }
+            footer{
+                flex-flow: column wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>domino's pizza</h1>
+        <div>
+            <p>our menu</p>
+            <p>domino's store</p>
+            <p>gift card</p>
+            <p>corporate enqury</p>
+            <p>contact</p>
+        </div>
+        <button type="submit">download app</button>
+    </nav>
+    <div id="container">
+        <h2>Order</h2>
+        <div id="menu">
+            <div class="card">
+                <img src="https://i.ibb.co/cg36xpb/Screenshot-2022-12-22-at-8-37-04-AM-353938.png" alt="pizza.png">
+                <h3>veg pizza</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum nihil, corrupti ducimus perspiciatis consequatur eos?</p>
+                <button type="submit">view all</button>
+            </div>
+            <div class="card">
+                <img src="https://i.ibb.co/cg36xpb/Screenshot-2022-12-22-at-8-37-04-AM-353938.png" alt="pizza.png">
+                <h3>our menu</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum nihil, corrupti ducimus perspiciatis consequatur eos?</p>
+                <button type="submit">view all</button>
+            </div>
+            <div class="card">
+                <img src="https://i.ibb.co/cg36xpb/Screenshot-2022-12-22-at-8-37-04-AM-353938.png" alt="pizza.png">
+                <h3>our menu</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, delectus.</p>
+                <button type="submit">view all</button>
+            </div>
+            <div class="card">
+                <img src="https://i.ibb.co/cg36xpb/Screenshot-2022-12-22-at-8-37-04-AM-353938.png" alt="pizza.png">
+                <h3>our menu</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident architecto fugit eos corrupti illum ullam.</p>
+                <button type="submit">view all</button>
+            </div>
+            <div class="card">
+                <img src="https://i.ibb.co/cg36xpb/Screenshot-2022-12-22-at-8-37-04-AM-353938.png" alt="pizza.png">
+                <h3>veg pizza</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quod.</p>
+                <button type="submit">view all</button>
+            </div>
+            <div class="card">
+                <img src="https://i.ibb.co/cg36xpb/Screenshot-2022-12-22-at-8-37-04-AM-353938.png" alt="pizza.png">
+                <h3>our menu</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quod.</p>
+                <button type="submit">view all</button>
+            </div>
+        </div>
+        <h2>Explore</h2>
+        <div id="discover">
+            <div class="menucard">
+                <img src="https://i.ibb.co/h23n7v4/Screenshot-2022-12-21-at-3-06-17-PM-590391.png" alt="card-logo">
+                <h3>our menu</h3>
+                <p>Explore our range of delicious pizzas, deliverd in 30 minutes</p>
+                <div>discover pizza</div>
+            </div>
+            <div class="menucard">
+                <img src="https://i.ibb.co/h23n7v4/Screenshot-2022-12-21-at-3-06-17-PM-590391.png" alt="card-logo">
+                <h3>our menu</h3>
+                <p>Explore our range of delicious pizzas, deliverd in 30 minutes</p>
+                <div>discover pizza</div>
+            </div>
+            <div class="menucard">
+                <img src="https://i.ibb.co/h23n7v4/Screenshot-2022-12-21-at-3-06-17-PM-590391.png" alt="card-logo">
+                <h3>our menu</h3>
+                <p>Explore our range of delicious pizzas, deliverd in 30 minutes</p>
+                <div>discover pizza</div>
+            </div>
+            <div class="menucard">
+                <img src="https://i.ibb.co/h23n7v4/Screenshot-2022-12-21-at-3-06-17-PM-590391.png" alt="card-logo">
+                <h3>our menu</h3>
+                <p>Explore our range of delicious pizzas, deliverd in 30 minutes</p>
+                <div>discover pizza</div>
+            </div>
+            <div class="menucard">
+                <img src="https://i.ibb.co/h23n7v4/Screenshot-2022-12-21-at-3-06-17-PM-590391.png" alt="card-logo">
+                <h3>our menu</h3>
+                <p>Explore our range of delicious pizzas, deliverd in 30 minutes</p>
+                <div>discover pizza</div>
+            </div>
+            <div class="menucard">
+                <img src="https://i.ibb.co/h23n7v4/Screenshot-2022-12-21-at-3-06-17-PM-590391.png" alt="card-logo">
+                <h3>our menu</h3>
+                <p>Explore our range of delicious pizzas, deliverd in 30 minutes</p>
+                <div>discover pizza</div>
+            </div>
+            <div class="menucard">
+                <img src="https://i.ibb.co/h23n7v4/Screenshot-2022-12-21-at-3-06-17-PM-590391.png" alt="card-logo">
+                <h3>our menu</h3>
+                <p>Explore our range of delicious pizzas, deliverd in 30 minutes</p>
+                <div>discover pizza</div>
+            </div>
+            <div class="menucard">
+                <img src="https://i.ibb.co/h23n7v4/Screenshot-2022-12-21-at-3-06-17-PM-590391.png" alt="card-logo">
+                <h3>our menu</h3>
+                <p>Explore our range of delicious pizzas, deliverd in 30 minutes</p>
+                <div>discover pizza</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="app">
+            <img src="https://i.ibb.co/k05WwMX/new-app-img-2x.png" alt="new-app-img-2x">
+        </div>
+        <div id="offer">
+            <h1>Unlock Exclusive Offers</h1>
+            <p>For lightning fast ordering experience dowload the Domino's app</p>
+            <span> <img src="https://i.ibb.co/tpWfMGz/Screenshot-2022-12-21-at-2-47-09-PM-558991.png" alt="playstore">
+            <img src="https://i.ibb.co/PDYQJ30/Screenshot-2022-12-21-at-2-47-43-PM-652243.png" alt="appstore"></span>
+        </div>
+
+    </footer>
+    
+    
+</body>
+</html>
